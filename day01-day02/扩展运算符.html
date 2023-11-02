@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // let xiyou=['唐僧','悟空','八戒','沙僧']
+        // // iterator
+        // let iterator = xiyou[Symbol.iterator]();
+        // console.log(iterator);
+        // console.log(iterator.next());
+        // console.log(iterator.next());
+        // console.log(iterator.next());
+        // console.log(iterator.next());
+        // console.log(iterator.next());
+        // done 为true的时候是循环结束
+
+
+        // 生成器  (*)
+        // function demo (){}    //普通命名函数
+        // // 这是生成器函数
+        // function * demo (){
+        //     yield '两只老虎'   //返回值
+        //     yield '跑得快'
+        //     yield '一只没有耳朵'
+        //     yield '一只没有眼镜'
+        // }
+        // let iterator = demo()
+        // console.log(iterator.next());
+        // console.log(iterator.next());
+        // console.log(iterator.next());
+        // console.log(iterator.next());
+        // console.log(iterator.next());
+
+        /*
+        *两个参数
+        *resolve  成功的回调
+        *reject   失败的回调
+        *。then()  成功
+        .catch()  失败
+        *******/
+
+        // const p = new Promise((resolve, reject) => {
+        //     setTimeout(() => {
+        //         let ruslt = '我是失败的回调'
+        //         reject(ruslt)
+        //     }, 1000);
+        // })
+        // p.then((res) => {
+        //     console.log(res);
+        // }).catch((res) => {
+        //     console.log(res);
+        // })
+        // ajax
+        const p = new Promise((resolve,reject)=> {
+            const xhr = new XMLHttpRequest()
+            xhr.open('get', 'http://www.baidu')
+            xhr.send()
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState === 4) {
+                    if (xhr.status >= 200 && xhr.status < 300) {
+                        // 表示成功
+                        resolve(xhr.respones)
+                    } else {
+                        // 失败
+                        reject(xhr.status)
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+
+</html>

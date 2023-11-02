@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    // let obj = {
+    //     name:'小工',
+    //     title:'985'
+    // }
+    // delete obj.title
+    // console.log(obj);
+    // const map = new Map([
+    //      ['name','小工'],
+    //      ['title','985'],
+    //      ['titles','985'],
+    //      ['titless','985'],
+    // ])
+    // console.log(map.size);
+    // console.log(map.get('name'));
+    // console.log(map.has('age'));
+    // // console.log(map.delete('title'));
+    // console.log();
+    // let arr = ['1','2','3','4','4','55','55','56']
+    // let array = new Set(['1','2','3','4','4','55','55','56'])
+    // console.log(array);
+    function Point(x,y){
+        this.x=x;
+        this.y=y
+    }
+    Point.prototype.toString=function(){
+        return '('+this.x+','+this.y+')'
+    }
+    var p = new Point(1,2)
+    console.log(p);
+</script>
+</html>
