@@ -1,0 +1,22 @@
+git指令
+1. git clone git@github.com:threeSunlight/2301C.git(复制来的地址)
+2. 进入到克隆后的文件夹路径下
+3. 把代码放进去
+4. git add .
+5. git status // 查看暂存区是否有代码储存
+6. git commit -m '描述这块代码的作用'
+7. git push 
+这个是本地与线上连接
+建立分支并跳到当前分支上:git checkout -b 分支名
+将本地分支传到线上的命令符:git push origin 分支名
+查询主分支和以下分支:git branch
+删除线上远程分支:git push origin --d 分支名
+删除本地分支：git branch -d 分支名
+
+
+git公司开发环境
+ 1.本地环境   development
+2.测试环境     testing
+3.灰度环境，半上线，备机，非全量  stage
+4.线上坏经，全量   production
+
